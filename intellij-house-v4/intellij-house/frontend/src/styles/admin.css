@@ -1,0 +1,49 @@
+/* Área administrativa — portada do admin.html original.
+   Tudo escopado em .admin para não colidir com o CSS do painel (button, input, table, a...). */
+.admin { min-height: 100vh; }
+.admin header { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between; padding: 16px max(clamp(16px, 3.4vw, 56px), calc(50% - 560px + clamp(16px, 3.4vw, 56px))); background: var(--side); border-bottom: 1px solid var(--line); }
+.admin .brand-name { font-size: 17px; font-weight: 700; letter-spacing: -.01em; }
+.admin .brand-sub { font-size: 13px; color: var(--muted); margin-top: 0; } /* neutraliza o margin-top do .brand-sub do painel */
+.admin nav { display: flex; gap: 20px; flex-wrap: wrap; }
+.admin a { color: var(--accent); text-decoration: none; font-size: 13px; }
+.admin a:hover { text-decoration: underline; }
+
+.admin main { max-width: 1120px; margin: 0 auto; padding: 36px clamp(16px, 3.4vw, 56px) 60px; display: grid; gap: 16px; }
+.admin .page-title { margin: 0; font-size: 28px; line-height: 1.2; font-weight: 700; letter-spacing: -.015em; }
+.admin .page-sub { margin: 2px 0 14px; color: var(--muted); }
+
+.admin .card h2 { margin: 0; font-size: 16px; font-weight: 650; }
+.admin .sub { margin: 2px 0 16px; font-size: 13px; color: var(--muted); }
+.admin .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-end; }
+.admin label { display: grid; gap: 6px; font-size: 13px; color: var(--muted); }
+.admin input, .admin select { min-width: 160px; padding: 9px 12px; background: var(--inset); border: 1px solid var(--line); border-radius: var(--r); font-size: 13px; outline: none; }
+.admin input:focus, .admin select:focus { border-color: var(--accent); }
+.admin input::placeholder { color: #6f6f78; }
+
+.admin button { padding: 9px 16px; border: 0; border-radius: var(--r); background: var(--accent); color: var(--accent-ink); font-weight: 700; font-size: 13px; cursor: pointer; }
+.admin button:hover { background: #f0bc5e; }
+.admin button:disabled { opacity: .5; cursor: default; }
+.admin button.ghost { background: transparent; color: var(--text); border: 1px solid var(--line-strong); font-weight: 500; }
+.admin button.ghost:hover { border-color: var(--muted); background: transparent; }
+.admin button.danger { background: transparent; color: var(--err); border: 1px solid #5c2f2d; font-weight: 500; }
+.admin button.danger:hover { background: #2a1b1b; }
+.admin button.small { padding: 5px 10px; font-size: 12px; }
+
+.admin .scroll { overflow-x: auto; }
+.admin table { width: 100%; min-width: 560px; border-collapse: collapse; }
+.admin th, .admin td { padding: 11px 10px; text-align: left; border-bottom: 1px solid var(--line); font-size: 13.5px; }
+.admin th { font-size: 13px; font-weight: 500; color: var(--muted); }
+.admin tbody tr:last-child td { border-bottom: 0; }
+.admin td.num { color: var(--muted); font-variant-numeric: tabular-nums; }
+.admin .on { color: var(--text); }
+.admin .on::before, .admin .off::before { content: ""; display: inline-block; width: 7px; height: 7px; margin-right: 8px; border-radius: 50%; }
+.admin .on::before { background: var(--accent); }
+.admin .off { color: var(--muted); }
+.admin .off::before { background: var(--line-strong); }
+.admin .actions { display: flex; gap: 6px; }
+.admin .mb-12 { margin-bottom: 12px; }
+
+@media (max-width: 480px) {
+  .admin input, .admin select, .admin .row > button { width: 100%; }
+  .admin .card { padding: 16px; }
+}
