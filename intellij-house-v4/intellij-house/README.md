@@ -1,6 +1,5 @@
 # Intellij House — Casa Inteligente com Assistente Virtual (NLU + ML)
 
-Projeto acadêmico do 4º semestre de Análise e Desenvolvimento de Sistemas (ADS).
 O usuário conversa com a casa em linguagem natural ("Apague a luz da sala") e o sistema entende e executa o comando em dispositivos **simulados**. A casa também **aprende a rotina do morador** (Machine Learning) e sugere ações nos horários habituais.
 
 **Atalhos depois de rodar:** painel do morador `http://localhost:3000` · área administrativa `http://localhost:3000/#/admin` · documentação Swagger `/docs` · saúde `/saude`.
